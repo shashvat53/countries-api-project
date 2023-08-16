@@ -19,7 +19,7 @@ fetch("https://restcountries.com/v3.1/all")
                 "en-IN"
               )}</p>
               <p><b>Region: </b>${country.region}</p>
-              <p><b>Capital: :</b>${country.region}</p>
+              <p><b>Capital: </b>${country.region}</p>
       `;
       countryCard.innerHTML = cardHTML;
       container.append(countryCard);
