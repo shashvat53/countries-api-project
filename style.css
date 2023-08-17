@@ -16,7 +16,7 @@ header{
 }
 
 .header-content{
-    max-width: 1200px;
+    max-width: 1400px;
     margin-inline: auto;
     display: flex;
     justify-content: space-between;
@@ -26,7 +26,7 @@ main{
     padding: 24px;
 }
 .country-container{
-    max-width: 1200px;
+    max-width: 1600px;
     margin-inline: auto;
     display: flex;
     gap: 64px;
@@ -58,4 +58,32 @@ main{
 }
 .card-text p{
     margin-bottom: 10px;
+}
+
+
+@media (max-width: 1165px) {
+    .header-content{
+        max-width: 1000px;
+        margin-inline: auto;
+
+    }
+    .country-container{
+        max-width: 1000px;
+        margin-inline: auto;
+        
+        gap: 48px;
+        
+        margin-top: 72px;
+    }
+    
+}
+@media (max-width: 482px){
+    .header-content h2{     
+        font-size: 16px;
+        
+    }
+    .header-content p{     
+        font-size: 12px;
+        
+    }
 }
