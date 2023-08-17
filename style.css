@@ -31,6 +31,7 @@ main{
     display: flex;
     gap: 64px;
     flex-wrap: wrap;
+    margin-top: 64px;
 }
 .country-card{
     width: 250px;

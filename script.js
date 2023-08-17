@@ -5,11 +5,11 @@ fetch("https://restcountries.com/v3.1/all")
   .then((data) => {
     console.log(data.length);
     data.forEach((country) => {
-      console.log(country);
+      // console.log(country);
 
       const countryCard = document.createElement("a");
       countryCard.classList.add("country-card");
-      countryCard.href = `#`;
+      countryCard.href = `/country.html?name=${country.name.common}`;
       //   console.log(countryCard);
       const cardHTML = `
             <img src=${country.flags.svg} alt="flag" />
@@ -19,7 +19,7 @@ fetch("https://restcountries.com/v3.1/all")
                 "en-IN"
               )}</p>
               <p><b>Region: </b>${country.region}</p>
-              <p><b>Capital: </b>${country.region}</p>
+              <p><b>Capital: </b>${country.capital}</p>
       `;
       countryCard.innerHTML = cardHTML;
       container.append(countryCard);
