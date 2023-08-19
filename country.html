@@ -21,14 +21,14 @@
   <body>
     <header>
       <div class="header-content">
-        <h2>Where in the world?</h2>
+        <h2><a href="/">Where in the world?</a></h2>
         <p><i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode</p>
       </div>
     </header>
     <main>
       <div class="container">
-        <a class="btn" href="#"
-          ><i class="fa-solid fa-arrow-left-long"></i>&nbsp;&nbsp;Back</a
+        <span class="btn" onclick="history.back()"
+          ><i class="fa-solid fa-arrow-left-long"></i>&nbsp;&nbsp;Back</span
         >
         <div class="country-container">
           <img src="" alt="flag" />
@@ -40,7 +40,7 @@
                 <p><b>Popolation: </b><span class="population"></span></p>
                 <p><b>Region: </b><span class="region"></span></p>
                 <p><b>Sub Region: </b><span class="subRegion"></span></p>
-                <p><b>Capital: </b><span class="capital">Brussels</span></p>
+                <p><b>Capital: </b><span class="capital"></span></p>
               </div>
               <div class="right-text">
                 <p>
@@ -50,13 +50,7 @@
                 <p><b>Languages: </b><span class="languages"></span></p>
               </div>
             </div>
-            <div class="border-contries">
-              <p>
-                <b>Border Countries: </b>&nbsp;<a href="#">France</a
-                ><a href="#">Germany</a>
-                <a href="#">Netherlands</a>
-              </p>
-            </div>
+            <div class="border-contries"><b>Border Countries: </b>&nbsp;</div>
           </div>
         </div>
       </div>
