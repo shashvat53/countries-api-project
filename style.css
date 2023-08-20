@@ -5,14 +5,31 @@
     font-family: Nunito;
 }
 
-html,body{
-    width: 100%;
-    height: 100vh;
+body{
+    --background-color:white;
+    --text-color:black;
+    --element-color:white;
+    
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
-
+body.dark{
+    --background-color:hsl(207, 26%, 17%);
+    --text-color:white;
+    --element-color:hsl(207, 26%, 17%);
+}
+.theme-changer{
+    cursor: pointer;
+    /* display: none; */
+    /* visibility: hidden; */
+}
+.light-mode{
+    display: none;
+}
 header{
     box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.09);
     padding: 24px;
+    
 }
 
 .header-content{
@@ -21,6 +38,7 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--background-color);
 }
 .header-content h2 a{
     text-decoration: none;
@@ -46,6 +64,7 @@ main{
     text-decoration: none;
     color: inherit;
     transition: all 0.2s ease-out;
+    background-color: var(--background-color);
 }
 .country-card:hover{
     transform: scale(1.04);
@@ -72,6 +91,8 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 .search-container input{
     padding: 2px 16px;
@@ -81,6 +102,8 @@ main{
     border: none;
     outline: none;
     font-size: 18px;
+    background-color: inherit;
+    color: inherit;
 }
 .search-container button{
     padding: 2px 12px;
@@ -90,6 +113,8 @@ main{
     border: none;
     font-size: 18px;
     cursor: pointer;
+    background-color: inherit;
+    color: inherit;
 }
 .filter-by-region{
     width: 150px;
@@ -98,6 +123,9 @@ main{
     outline: none;
     box-shadow: 0px 0px 4px 2px rgba(0,0,0,0.09);
     border-radius: 2px;
+    background-color: inherit;
+    color: inherit;
+
 }
 @media (max-width: 1165px) {
     .header-content{

@@ -4,6 +4,10 @@ const filterByRegion = document.querySelector(".filter-by-region");
 // console.log(filterByRegion);
 const searchInput = document.querySelector(".search-container input");
 let allCountriesData;
+const themeChanger = document.querySelector(".theme-changer");
+const darkMode = document.querySelector(".dark-mode");
+const lightMode = document.querySelector(".light-mode");
+console.log(themeChanger.innerText);
 
 fetch("https://restcountries.com/v3.1/all")
   .then((res) => res.json())
@@ -43,6 +47,22 @@ function renderCountries(data) {
 }
 
 searchInput.addEventListener("input", (e) => {
-  console.log(e.target.value);
-  console.log(allCountriesData);
+  // console.log(e.target.value);
+  // console.log(allCountriesData);
+  const filtered = allCountriesData.filter((country) =>
+    country.name.common.toLowerCase().includes(e.target.value.toLowerCase())
+  );
+  // console.log(filtered);
+  renderCountries(filtered);
+});
+
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (lightMode.style.display === "none") {
+    darkMode.style.display = "none";
+    lightMode.style.display = "block";
+  } else {
+    lightMode.style.display = "none";
+    darkMode.style.display = "block";
+  }
 });

@@ -1,4 +1,7 @@
 const countryName = new URLSearchParams(window.location.search).get("name");
+const themeChanger = document.querySelector(".theme-changer");
+const darkMode = document.querySelector(".dark-mode");
+const lightMode = document.querySelector(".light-mode");
 // console.log(countryName);
 const flag = document.querySelector(".country-container img");
 const countryHeading = document.querySelector(".text-container h1");
@@ -60,3 +63,14 @@ fetch(`https://restcountries.com/v3.1/name/${countryName}?fullText=true`)
       });
     }
   });
+
+themeChanger.addEventListener("click", () => {
+  document.body.classList.toggle("dark");
+  if (lightMode.style.display === "none") {
+    darkMode.style.display = "none";
+    lightMode.style.display = "block";
+  } else {
+    lightMode.style.display = "none";
+    darkMode.style.display = "block";
+  }
+});
